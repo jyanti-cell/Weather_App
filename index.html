@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="authSection">
+
+        <!-- LOGIN FORM -->
+
+        <div id="loginForm">
+
+            <h2>🔐 Login</h2>
+
+            <input
+                type="text"
+                id="loginUser"
+                placeholder="Username">
+
+            <input
+                type="password"
+                id="loginPass"
+                placeholder="Password">
+
+            <button onclick="login()">
+                Login
+            </button>
+
+            <p id="loginMsg"></p>
+
+            <p>Don't have an account?</p>
+
+            <button onclick="showSignup()">
+                Create Account
+            </button>
+
+        </div>
+
+        <!-- SIGNUP FORM -->
+
+        <div id="signupForm" style="display:none;">
+
+            <h2>🆕 Create Account</h2>
+
+            <input
+                type="text"
+                id="newUser"
+                placeholder="Username">
+
+            <input
+                type="password"
+                id="newPass"
+                placeholder="Password">
+
+            <button onclick="createAccount()">
+                Create Account
+            </button>
+
+            <button onclick="showLogin()">
+                Back To Login
+            </button>
+
+            <p id="signupMsg"></p>
+
+        </div>
+
+    </div>
+
+    <!-- WEATHER APP -->
+
+    <div id="weatherSection" style="display:none;">
+
+        <button
+            class="logoutBtn"
+            onclick="logout()">
+            Logout
+        </button>
+
+        <h1>🌦 Weather App</h1>
+
+        <input
+            type="text"
+            id="city"
+            placeholder="Enter City Name">
+
+        <button onclick="getWeather()">
+            Search
+        </button>
+
+        <div id="weatherResult"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
